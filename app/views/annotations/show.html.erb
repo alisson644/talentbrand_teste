@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @annotation.title %>
+</p>
+
+<p>
+  <strong>Annotation:</strong>
+  <%= @annotation.annotation %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @annotation.date %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @annotation.priority %>
+</p>
+
+<%= link_to 'Edit', edit_annotation_path(@annotation) %> |
+<%= link_to 'Back', annotations_path %>

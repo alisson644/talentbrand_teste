@@ -5,11 +5,25 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <%= stylesheet_pack_tag 'styles', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="bg-gradient-primary">
+    <div class="container">
+    <% if notice %>
+    <div class="alert alert-success" role="alert">
+      <p class="text-justify"><%= notice %></p>
+    </div>
+    <% end %>
+    <% if alert %>
+    <div class="alert alert-danger" role="alert">
+      <p class="text-justify"><%= alert %></p>
+    </div>
+    <% end %>
+      <%= yield %>
+    </div>
   </body>
 </html>
