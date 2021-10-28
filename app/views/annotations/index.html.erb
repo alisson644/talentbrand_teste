@@ -2,16 +2,16 @@
 <%= form_tag("/annotations", method: "get", class:"form-inline my-2 my-lg-0") do %>
   <%= label_tag(:q, "buscar anotações:") %>
   <%= text_field_tag(:q) %>
-  <%= submit_tag("Search", class:"btn btn-outline-success my-2 my-sm-0") %>
+  <%= submit_tag("#{t('actions.search')}", class:"btn btn-outline-success my-2 my-sm-0") %>
 <% end %>
 
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">Title</th>
-      <th scope="col">Annotation</th>
-      <th scope="col">Date</th>
-      <th scope="col">Priority</th>
+      <th scope="col"><%= t 'annotation.title' %></th>
+      <th scope="col"><%= t 'annotation.annotation' %></th>
+      <th scope="col"><%= t 'annotation.date' %></th>
+      <th scope="col"><%= t 'annotation.priority' %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,9 +24,9 @@
         <td><%= annotation.annotation %></td>
         <td><%= annotation.date %></td>
         <td><%= annotation.priority %></td>
-        <td><%= link_to 'Show', annotation, class:"btn btn-primary" %></td>
-        <td><%= link_to 'Edit', edit_annotation_path(annotation), class:"btn btn-info" %></td>
-        <td><%= link_to 'Destroy', annotation,class:"btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to "#{t('actions.show')}" , annotation, class:"btn btn-primary" %></td>
+        <td><%= link_to "#{t('actions.edit')}", edit_annotation_path(annotation), class:"btn btn-info" %></td>
+        <td><%= link_to "#{t('actions.destroy')}", annotation, class:"btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Annotation', new_annotation_path, class:"btn btn-primary" %>
+<%= link_to "#{t('helpers.submit.create', model: "Anotação" )}", new_annotation_path, class:"btn btn-primary" %>

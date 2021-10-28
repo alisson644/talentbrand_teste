@@ -12,22 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label "#{t 'annotation.title'}" %>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :annotation %>
+    <%= form.label "#{t 'annotation.annotation'}" %>
     <%= form.text_area :annotation %>
   </div>
 
   <div class="field">
-    <%= form.label :date %>
+    <%= form.label "#{t 'annotation.date'}" %>
     <%= form.date_select :date %>
   </div>
 
   <div class="field">
-    <%= form.label :priority %>
+    <%= form.label "#{t 'annotation.priority'}" %>
     <%= form.select(:priority, Annotation.priorities.keys, {}) %>
   </div>
 

@@ -1,24 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong><%= t 'annotation.title' %>:</strong>
   <%= @annotation.title %>
 </p>
 
 <p>
-  <strong>Annotation:</strong>
+  <strong><%= t 'annotation.annotation' %>:</strong>
   <%= @annotation.annotation %>
 </p>
 
 <p>
-  <strong>Date:</strong>
+  <strong><%= t 'annotation.date' %>:</strong>
   <%= @annotation.date %>
 </p>
 
 <p>
-  <strong>Priority:</strong>
+  <strong><%= t 'annotation.priority' %>:</strong>
   <%= @annotation.priority %>
 </p>
 
-<%= link_to 'Edit', edit_annotation_path(@annotation) %> |
-<%= link_to 'Back', annotations_path %>
+<%= link_to "#{t('actions.edit')}", edit_annotation_path(@annotation) %> |
+<%= link_to "#{t('actions.back')}", annotations_path %>

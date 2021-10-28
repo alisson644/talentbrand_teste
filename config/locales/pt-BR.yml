@@ -1,0 +1,24 @@
+pt-BR:
+  activerecord:
+    models:
+      annotation:
+        one: Anotação
+        other: Anotações
+  helpers:
+    submit:
+      create: "Criar %{model}"
+      update: "Alterar %{model}"
+  actions:
+    show: Exibir
+    edit: Editar
+    destroy: Deletar
+    search: Pesquisar
+    back: Voltar
+  annotation:
+    title: Título
+    annotation: Anotação
+    date: Data
+    priority: Prioridade
+  
+  
+
