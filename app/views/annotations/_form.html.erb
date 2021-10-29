@@ -1,7 +1,7 @@
-<%= form_with(model: annotation, local: true) do |form| %>
+<%= form_with(model: annotation, local: true ) do |form| %>
   <% if annotation.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(annotation.errors.count, "error") %> prohibited this annotation from being saved:</h2>
+      <h2><%= pluralize(annotation.errors.count, "error") %> impediu que anotação fosse salva:</h2>
 
       <ul>
         <% annotation.errors.full_messages.each do |message| %>
@@ -11,27 +11,26 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label "#{t 'annotation.title'}" %>
-    <%= form.text_field :title %>
+  <div class="form-group">
+    <%= form.text_field :title, class:"form-control", placeholder:"Título", required: true, errors: "Título não pode ser vazio" %>
   </div>
 
-  <div class="field">
-    <%= form.label "#{t 'annotation.annotation'}" %>
-    <%= form.text_area :annotation %>
+  <div class="form-group">
+    <%= form.text_area :annotation, class:"form-control", placeholder:"Anotação", required: true %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "#{t 'annotation.date'}" %>
-    <%= form.date_select :date %>
+    <%= form.date_select :date, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "#{t 'annotation.priority'}" %>
     <%= form.select(:priority, Annotation.priorities.keys, {}) %>
   </div>
 
   <div class="actions">
+    <%= link_to "#{t('actions.back')}", root_path, class:"btn btn-secondary" %>
     <%= form.submit %>
   </div>
 <% end %>

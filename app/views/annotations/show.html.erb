@@ -1,24 +1,41 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong><%= t 'annotation.title' %>:</strong>
-  <%= @annotation.title %>
-</p>
 
-<p>
-  <strong><%= t 'annotation.annotation' %>:</strong>
-  <%= @annotation.annotation %>
-</p>
+ <div class="row justify-content-center">
+  <div class="col-xl-6 col-lg-12 col-md-9">
+    <div class="card o-hidden border-0 shadow-lg my-5">
+      <div class="card-body p-0">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="p-5">
+              <div class="text-center">
+                  <h1 class="h4 text-gray-900 mb-4">Exibir Anotação</h1>
+              </div>
+                <p>
+                <strong><%= t 'annotation.title' %>:</strong>
+                <%= @annotation.title %>
+              </p>
 
-<p>
-  <strong><%= t 'annotation.date' %>:</strong>
-  <%= @annotation.date %>
-</p>
+              <p>
+                <strong><%= t 'annotation.annotation' %>:</strong>
+                <%= @annotation.annotation %>
+              </p>
 
-<p>
-  <strong><%= t 'annotation.priority' %>:</strong>
-  <%= @annotation.priority %>
-</p>
+              <p>
+                <strong><%= t 'annotation.date' %>:</strong>
+                <%= @annotation.date %>
+              </p>
 
-<%= link_to "#{t('actions.edit')}", edit_annotation_path(@annotation) %> |
-<%= link_to "#{t('actions.back')}", annotations_path %>
+              <p>
+                <strong><%= t 'annotation.priority' %>:</strong>
+                <%= @annotation.priority %>
+              </p>
+
+              <%= link_to "#{t('actions.edit')}", edit_annotation_path(@annotation), class:"btn btn-primary" %> 
+              <%= link_to "#{t('actions.back')}", annotations_path,  class:"btn btn-secondary" %>
+            </div
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

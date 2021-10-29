@@ -1,9 +1,23 @@
 pt-BR:
+  devise:
+    sessions:
+      user:
+        signed_in: Usuário Logado com sucesso!
+    failure:
+      user:
+        unauthenticated: Usuário está deslogado!
   activerecord:
     models:
       annotation:
         one: Anotação
         other: Anotações
+    attributes:
+      annotation:
+        title: Título
+        annotation: Anotação
+        date: Data
+        priority: Prioridade
+    
   helpers:
     submit:
       create: "Criar %{model}"
