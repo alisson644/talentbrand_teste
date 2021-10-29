@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Para instalar bast rodar bundle install e rails s para subir.
 
-Things you may want to cover:
+## O que foi feito
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Ajustado a tela de login do Devise
+- Tela principal
+- search buscando uma parte da palavra usando scope na model
+- 3 testes de validação de presença 
+- paginação usando Kaminari gem
+- tradução do app para poruguês usando I18n
+- crud usando scaffold
+- alteração na index para que só o usuário tenha acesso a sua anotação
+- instalação do bootstrap
