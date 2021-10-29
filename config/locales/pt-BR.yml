@@ -1,4 +1,10 @@
 pt-BR:
+  views:
+    pagination:
+      first: Primeira
+      last: Última
+      next: Próxima
+      previous: Anterior
   devise:
     sessions:
       user:
@@ -6,6 +12,7 @@ pt-BR:
     failure:
       user:
         unauthenticated: Usuário está deslogado!
+        invalid: Usuário inválido
   activerecord:
     models:
       annotation:

@@ -5,9 +5,9 @@ class AnnotationsController < ApplicationController
   def index
     @annotation = Annotation.new
     if params[:q]
-      @annotations = Annotation.where(user_id: current_user.id).search_title_or_annotation(params[:q])
+      @annotations = Annotation.where(user_id: current_user.id).page(params[:page]).per(3).search_title_or_annotation(params[:q]).order(priority: "desc")
     else
-      @annotations = Annotation.where(user_id: current_user.id).order(priority: "desc")
+      @annotations = Annotation.where(user_id: current_user.id).page(params[:page]).per(3).order(priority: "desc")
     end
   end
 
