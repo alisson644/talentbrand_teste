@@ -6,6 +6,9 @@ pt-BR:
       next: Próxima
       previous: Anterior
   devise:
+    registrations:
+      user:
+        signed_up: Usuário Criado com sucesso!
     sessions:
       user:
         signed_in: Usuário Logado com sucesso!
