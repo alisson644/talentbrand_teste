@@ -31,6 +31,6 @@
 
   <div class="actions">
     <%= link_to "#{t('actions.back')}", root_path, class:"btn btn-secondary" %>
-    <%= form.submit %>
+    <%= submit_tag("Salvar Anotação", :class=>"btn btn-primary", :name=>"submit") %>
   </div>
 <% end %>
